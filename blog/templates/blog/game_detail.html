@@ -1,0 +1,33 @@
+<!-- Template inheritance -->
+{% extends 'base.html' %}
+{% block tab_name %}
+<title>{{ game.title }}</title>
+{% endblock %}
+{% block navgation %}
+<a href="/blog">Game list</a> |
+{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="{% url 'game_list' %}">List of games</a>
+    </li>
+    <!-- Do not change next element -->
+    <li class="breadcrumb-item active" aria-current="page">Detail page</li>
+  </ol>
+</nav>
+
+<h1>{{ game.title }}</h1>
+
+<p>Max number of players: {{ game.players }}</p>
+
+<p>Average duration: {{ game.duration }} minutes</p>
+
+<p>Designer: {{ game.designer }} </p>
+
+<h5>{{ game.description }}</h5>
+<button>
+  <a href="{% url 'edit-game' game.pk %}">Edit game</a>
+</button>
+
+{% endblock %}

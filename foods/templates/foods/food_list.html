@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block tab_name %}
+<title>Food list</title>
+{% endblock %}
+{% block navgation %}
+<a href="/blog">Blog</a> |
+{% endblock %}
+{% block content %}
+
+<h7>
+  This page have been visited {{ number_of_visitors }}
+  time{{number_of_visitors|pluralize}}!
+</h7>
+
+{% if user_logged_in %}
+<p>You are logged in!</p>
+{% endif %}
+
+<h3>Number of recipes uploaded so far: <tt>{{count}}</tt></h3>
+
+<ul>
+  {% for food in list_of_favorite_foods %}
+  <li><a href="{% url 'detail' food.id %}">{{ food }}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

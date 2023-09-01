@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block tab_name %}
+<title>{{ food.name }}</title>
+{% endblock %}
+{% block navgation %}
+<a href="/foods">Food list</a> |
+{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="{% url 'list' %}">List of foods</a>
+    </li>
+    <!-- Do not change next element -->
+    <li class="breadcrumb-item active" aria-current="page">Detail page</li>
+  </ol>
+</nav>
+
+<h1>{{ food.name }}</h1>
+<p>{{ food.recipe }}</p>
+
+<h2>{{ food.origin }}</h2>
+
+<tt> {{ food.date_of_expiry }} </tt>
+<button>
+  <a href="{% url "edit-food" food.pk %}">Edit food</a>
+</button>
+
+{% endblock %}

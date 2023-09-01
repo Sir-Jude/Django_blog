@@ -1,0 +1,32 @@
+<title>Homepage</title>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Welcome to my learning website</h1>
+      {% if user.is_authenticated %}
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a href="https://www.accuweather.com/" target="_blank">Check the weather...</a>
+          </li>
+          <li class="list-group-item">
+            <a href="/blog">Visit the blog</a>
+          </li>
+          <li class="list-group-item">
+            <a href="{% url 'new-game' %}">New game</a>
+          <li class="list-group-item">
+            <a href="{% url 'list' %}">List of foods</a>
+          </li>
+          <li class="list-group-item">
+            <a href="{% url 'new-food' %}">New food</a>
+          </li>
+        </ul>
+      {% else %}
+      <h3>Please, log in!</h3>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
