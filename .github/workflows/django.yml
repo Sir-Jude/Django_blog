@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
       POSTGRES_HOST: localhost
       POSTGRES_DB: website
       POSTGRES_PORT: 5432
@@ -23,7 +23,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
           POSTGRES_DB: website
         ports:
           - 5432:5432
@@ -38,20 +38,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-<<<<<<< HEAD
       - name: Python setup ${{matrix.python-version}}
         uses: actions/setup-python@v1
-=======
-
-      - name: Setup Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
->>>>>>> 0207486 (Fix the django.yml file)
         with:
            python-version: ${{ matrix.python-version }}
-
-      # - name: Create database
-      #   run: |
-      #       createdb imdb_apollo
 
       - name: Setup and start virtual environment
         run: | 
