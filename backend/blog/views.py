@@ -24,7 +24,7 @@ def new_game(request):
         form = GameForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse("blog_list"))
+            return HttpResponseRedirect(reverse("game_list"))
     return render(request, "blog/new_game.html", {"form": form})
 
 
