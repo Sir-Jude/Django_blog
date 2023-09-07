@@ -25,7 +25,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("blog/", include("blog.urls")),
     path("blog/", game_list, name="game_list.html"), # Used for the test
-    path("foods/", include("foods.urls")),
     path("accounts/", include("accounts.urls")),  # django will pick this version first
     path("accounts/", include("django.contrib.auth.urls")),
 ]

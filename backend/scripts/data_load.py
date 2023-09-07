@@ -1,6 +1,5 @@
 from blog.models import Game
 from datetime import datetime, timedelta
-from foods.models import Food
 from django.contrib.auth.models import User
 from faker import Faker
 from faker_food import FoodProvider

@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",  # management of static files
     "blog",
     "django_extensions",
-    "foods",
     "accounts",
 ]
 
