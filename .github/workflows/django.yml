@@ -4,9 +4,9 @@ on:
     workflow_call:
     workflow_dispatch:
     push:
-       branches: [main]
+       branches: [test_1]
     pull_request:
-        branches: [main]
+        branches: [test_1]
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: website
-        ports:
+        pgit push --set-upstream origin testorts:
           - 5432:5432
         options: >-
           --health-cmd pg_isready 
