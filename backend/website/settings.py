@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-y@t^z4_5eu*n7#ru@y(a(bk73u-_k1dwbxgbwfoeo*o(jtscc^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.64.56.8']
+ALLOWED_HOSTS = []
 
 # Add these two lines to allow the homepage redirection after login/logout
 LOGIN_REDIRECT_URL = "/"
