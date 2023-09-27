@@ -60,4 +60,4 @@ jobs:
           DB_DATABASE: website
           DB_PORT: 5432
         run: |
-          python3 backend/manage.py test blog
+          python3 manage.py test blog
