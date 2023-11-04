@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: giulio.arpaia@gmail.com
+Date: Sat, 04 Nov 2023 10:22:21 -0000
+Message-ID: <169909334175.32626.4318164736974480367@project-2501>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MQ/bx50x9-d6f30e3a7f77847994c7eea643652fa3/
+
+Your username, in case you’ve forgotten: Jude
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
